@@ -1,0 +1,35 @@
+.game-row {
+    height: 70px;
+    border: 1px solid black;
+    margin: 10px 10px 10px 10px;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 5px;
+}
+
+.game-row img {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
+
+.game-row-info {
+    line-height: 22px;
+    color: darkslategray;
+}
+
+.game-row-info div:first-child {
+    color: black;
+}
+
+.buttons {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.buttons button {
+    background: white;
+    border: blue 1px solid;
+    padding: 10px;
+    border-radius: 5px;
+}

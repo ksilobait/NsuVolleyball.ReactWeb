@@ -1,0 +1,23 @@
+.home-sidebar {
+    background: darkorange;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 400px;
+}
+
+.home-sidebar button {
+    text-align: left;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 26px;
+    width: inherit;
+    padding-top: 15px;
+    padding-left: 50px;
+}
+
+.home-sidebar button:first-child {
+    margin-top: 100px;
+}

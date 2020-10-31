@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
+import '../static/css/home-sidebar.css'
 
 export class HomeSidebar extends Component {
     static propTypes = {
@@ -11,14 +12,14 @@ export class HomeSidebar extends Component {
     
     render() {
         return (
-            <Fragment>
+            <div className='home-sidebar'>
                 <button onClick={() => { this.switchPage(1) }}> Игры </button>
                 <button onClick={() => { this.switchPage(2) }}> Новости </button>
                 <button onClick={() => { this.switchPage(3) }}> Галерея </button>
-                <button onClick={() => { this.switchPage(4) }}> Ком??? </button>
-                <button onClick={() => { this.switchPage(5) }}> Тренировк??? </button>
+                <button onClick={() => { this.switchPage(4) }}> Команда </button>
+                <button onClick={() => { this.switchPage(5) }}> Тренировки </button>
                 <button onClick={() => { this.switchPage(6) }}> Контакты </button>
-            </Fragment>
+            </div>
         )
     }
 

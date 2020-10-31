@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import HomeSidebar from './HomeSidebar'
+import '../static/css/home.css'
+import GamesPage from './GamesPage'
 
 export class Home extends Component {
     state = { selected_page_ID: 0 }
@@ -8,13 +10,13 @@ export class Home extends Component {
         this.setState({selected_page_ID: id})
     }
 
-
     render() {
         return (
             <Fragment>
                 <HomeSidebar switchPage={this.switchPage}> </HomeSidebar>
-    
-                { this.renderSelectedPage() }
+                <div className='content'>
+                    { this.renderSelectedPage() }
+                </div>
             </Fragment>
         )
     }
@@ -22,20 +24,10 @@ export class Home extends Component {
     renderSelectedPage = () => {
         switch (this.state.selected_page_ID) {
             case 1:
-                return this.renderGamesPage()
+                return <GamesPage/>
             default:
                 return null;
         }
-    }
-
-    renderGamesPage = () => {
-        return (
-            <div>
-                br
-                <br/>
-                brrr
-            </div>
-        )
     }
 }
 
