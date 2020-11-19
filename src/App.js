@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
 import { Provider } from 'react-redux';
 
 import Home from "./components/Home";
+import './static/css/fixer.css'
 
 
 class App extends Component {

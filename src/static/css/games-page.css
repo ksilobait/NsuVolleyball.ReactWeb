@@ -3,7 +3,7 @@
     border: 1px solid black;
     margin: 10px 10px 10px 10px;
     display: grid;
-    grid-template-columns: 80px 1fr;
+    grid-template-columns: 80px 1fr 50px;
     gap: 5px;
 }
 
@@ -32,4 +32,40 @@
     border: blue 1px solid;
     padding: 10px;
     border-radius: 5px;
+}
+
+.game-edit-window {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 705px;
+    height: 240px;
+    font-size: 18pt;
+    background: #eaf4f4;
+    -webkit-box-shadow: 0px 4px 3px 0px rgb(35,45,65, 0.5);
+    -moz-box-shadow: 0px 4px 3px 0px rgb(35,45,65, 0.5);
+    box-shadow: 0px 4px 3px 0px rgb(35,45,65, 0.5);
+}
+.game-edit-window input{
+    padding: 10px;
+    padding-left: 15px;
+    width: 475px;
+}
+.game-edit-window button{
+    background: #2eb32e;
+    color: white;
+    width: 705px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+}
+
+.game-edit-window label {
+    width: 200px;
+    float: left;
+    text-align: right;
+    line-height: 45px;
+    margin: 0 5px 0 0;
 }
