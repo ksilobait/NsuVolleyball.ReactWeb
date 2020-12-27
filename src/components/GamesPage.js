@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import '../static/css/games-page.css'
 import Game from './Game.js'
 import PropTypes from 'prop-types'
+import axios from 'axios'
 
 export class GamesPage extends Component {
     static propTypes = {
@@ -17,39 +18,14 @@ export class GamesPage extends Component {
     }
 
     componentDidMount() {
-        const futureGames = [
-            {
-                key: 0,
-                picture: "https://www.flaticon.com/svg/static/icons/svg/3571/3571555.svg",
-                name: "НГУ vs НГТУ",
-                date: 'new Date()',
-                location: "СК НГТУ"
-            },
-            {
-                key: 1,
-                picture: "https://www.flaticon.com/svg/static/icons/svg/3571/3571852.svg",
-                name: "НГТУ vs НГУ",
-                date: 'new Date()',
-                location: "СК НГУ"
-            }
-        ]
-        const pastGames = [
-            {
-                key: 2,
-                picture: "https://www.flaticon.com/svg/static/icons/svg/3571/3571852.svg",
-                name: "ззз vs ыыы",
-                date: 'new Date()',
-                location: "СК СК"
-            },
-            {
-                key: 3,
-                picture: "https://www.flaticon.com/svg/static/icons/svg/3571/3571555.svg",
-                name: "СК СК",
-                date: 'new Date()',
-                location: "ride"
-            }
-        ]
-        this.setState({futureGames, pastGames})
+        axios.get("http://localhost:8080/api/games").then((res) => {
+            this.setState({
+                futureGames: res.data.future.map((game) => {
+                    return {key: game.id, picture: 'https://www.flaticon.com/svg/static/icons/svg/3571/3571555.svg', name: game.name, date: game.time, location: game.stadium}}),
+                pastGames: res.data.past.map((game) => {
+                    return {key: game.id, picture: 'https://www.flaticon.com/svg/static/icons/svg/3571/3571555.svg', name: game.name, date: game.time, location: game.stadium}})
+            })
+        })
     }
 
     render() {

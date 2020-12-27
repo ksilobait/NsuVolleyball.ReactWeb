@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import HomeSidebar from './HomeSidebar'
 import '../static/css/home.css'
 import GamesPage from './GamesPage'
+import NewsPage from './NewsPage'
 import { extractToken } from '../utils'
 
 export class Home extends Component {
@@ -35,6 +36,8 @@ export class Home extends Component {
         switch (this.state.selected_page_ID) {
             case 1:
                 return <GamesPage isAuthorized={this.state.is_authorized}/>
+            case 2:
+                return <NewsPage isAuthorized={this.state.is_authorized}/>
             default:
                 return null;
         }

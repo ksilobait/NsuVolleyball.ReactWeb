@@ -11,7 +11,7 @@ export class Game extends Component {
 
     state = {
         key : -1,
-        picture: '',
+        picture: 'https://www.flaticon.com/svg/static/icons/svg/3571/3571555.svg',
         name: '',
         date: '',
         location: ''
@@ -21,7 +21,6 @@ export class Game extends Component {
         if (this.props.game) {
             this.setState({
                 key: this.props.game.key,
-                picture: this.props.game.picture,
                 name: this.props.game.name,
                 date: this.props.game.date,
                 location: this.props.game.location

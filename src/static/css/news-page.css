@@ -1,0 +1,26 @@
+.news{
+    background: white;
+    padding: 20px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 20px
+}
+.title {
+    font-size: 15pt;
+    margin: 5px 0;
+}
+
+.date {
+    background: #4caf50;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    height: 100px;
+    width: 100px;
+    display: table;
+}
+.date div {
+    display: table-cell;
+    vertical-align: middle
+}
