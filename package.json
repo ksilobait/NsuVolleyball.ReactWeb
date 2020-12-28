@@ -35,8 +35,8 @@
   },
   "scripts": {
     "dev": "webpack --mode development --watch ./src/index.js --output ./static/frontend/main.js",
-    "start": "react-scripts start",
     "build": "react-scripts build",
+    "start": "serve -s build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
