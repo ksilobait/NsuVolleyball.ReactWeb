@@ -1,5 +1,5 @@
 ## Branches
-dev - for development
+dev - for development<br />
 main - for Heroku deployment
 
 
