@@ -1,4 +1,9 @@
-## Run volleyball project
+## Branches
+dev - for development
+main - for Heroku deployment
+
+
+## Run volleyball project (from dev branch)
 
 In the project directory, you can run:
 
